@@ -28,6 +28,6 @@ public class CreatureScript : MonoBehaviour
             return;
         }
         direction = direction.normalized;
-        cc.Move(speed * Time.deltaTime * direction);
+        cc.Move(direction);
     }
 }
