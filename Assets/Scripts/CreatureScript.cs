@@ -2,13 +2,8 @@ using UnityEngine;
 
 public class CreatureScript : MonoBehaviour
 {
-    private CharacterController cc;
     public float speed = 10f;
-    void Awake()
-    {
-        cc = GetComponent<CharacterController>();
-    }
-
+    public float tileSize = 100/48f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,6 +23,6 @@ public class CreatureScript : MonoBehaviour
             return;
         }
         direction = direction.normalized;
-        cc.Move(direction);
+        transform.position = direction * tileSize;
     }
 }
