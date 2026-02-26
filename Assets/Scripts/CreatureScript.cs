@@ -13,4 +13,9 @@ public class CreatureScript : MonoBehaviour
     {
         
     }
+
+    public void KeyCollected()
+    {
+        
+    }
 }
