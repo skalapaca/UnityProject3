@@ -5,6 +5,7 @@ public class KeyPickup : MonoBehaviour
 {
     public GameObject keyVisual;
     public Transform playerHolder;
+    public CreatureScript player;
     private GameObject holdInstance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,10 +23,16 @@ public class KeyPickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            player.KeyCollected();
             holdInstance = Instantiate(keyVisual, playerHolder);
             holdInstance.transform.localPosition = Vector3.zero;
             holdInstance.transform.localRotation = Quaternion.identity;
             Destroy(gameObject);
         }
+    }
+
+    public void RemoveKeyVisual()
+    {
+        Destroy(holdInstance);
     }
 }

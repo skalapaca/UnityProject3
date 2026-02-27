@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CreatureScript : MonoBehaviour
 {
+    private bool isKeyCollected = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,6 +17,18 @@ public class CreatureScript : MonoBehaviour
 
     public void KeyCollected()
     {
-        
+        isKeyCollected = true;
+    }
+
+    public bool CanOpenDoor()
+    {
+        if (isKeyCollected)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
