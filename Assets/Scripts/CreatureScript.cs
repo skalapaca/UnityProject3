@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEngine;
 
 public class CreatureScript : MonoBehaviour
@@ -30,5 +31,10 @@ public class CreatureScript : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public void ResetDoorStatus()
+    {
+        isKeyCollected = false;
     }
 }

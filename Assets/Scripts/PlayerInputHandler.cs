@@ -13,25 +13,25 @@ public class PlayerInputHandler : MonoBehaviour
         if (Keyboard.current.wKey.wasPressedThisFrame)
         {
             // forwards
-            direction = new Vector3(0,0,1);
+            direction = new Vector3(1,0,0);
             TryMove(direction);
         }
         else if (Keyboard.current.sKey.wasPressedThisFrame)
         {
             // backwards
-            direction = new Vector3(0,0,-1);
+            direction = new Vector3(-1,0,0);
             TryMove(direction);
         }
         else if (Keyboard.current.aKey.wasPressedThisFrame)
         {
             // left
-            direction = new Vector3(-1,0,0);
+            direction = new Vector3(0,0,1);
             TryMove(direction);
         }
         else if (Keyboard.current.dKey.wasPressedThisFrame)
         {
             // right
-            direction = new Vector3(1,0,0);
+            direction = new Vector3(0,0,-1);
             TryMove(direction);
         }
     }

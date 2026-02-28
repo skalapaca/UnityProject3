@@ -3,6 +3,7 @@ using UnityEngine;
 public class OpenDoor : MonoBehaviour
 {
     public KeyPickup keyPickup;
+    public CreatureScript player;
     public GameObject unlockedDoorPrefab;
     private GameObject doorInstance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

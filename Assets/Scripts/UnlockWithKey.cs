@@ -22,6 +22,7 @@ public class UnlockWithKey : MonoBehaviour
         {
             Destroy(gameObject);
             openDoor.UnlockDoor();
+            player.ResetDoorStatus();
         }
     }
 }
