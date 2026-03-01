@@ -5,7 +5,13 @@ public class PlayerInputHandler : MonoBehaviour
 {
     public CreatureScript player;
     public LayerMask wallLayer;
+    private AudioSource audioSource;
     private float tileSize = 100/48f;
+
+    void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -42,6 +48,10 @@ public class PlayerInputHandler : MonoBehaviour
         if (!Physics.Raycast(player.transform.position, direction, tileSize, wallLayer))
         {
             player.transform.position = targetPostition;
+        }
+        else
+        {
+            audioSource.Play();
         }
     }
 }

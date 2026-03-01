@@ -1,14 +1,15 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public void LoseGame()
     {
-        Debug.Log("die");
+        SceneManager.LoadScene("LoseScene");
     }
 
     public void WinGame()
     {
-        Debug.Log("win");
+        SceneManager.LoadScene("WinScene");
     }
 }
